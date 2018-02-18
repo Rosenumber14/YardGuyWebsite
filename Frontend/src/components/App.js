@@ -1,11 +1,29 @@
 import React from 'react';
-import ButtonManager from './Containers/ButtonManager';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-const App = () => (
-  <div style={{ textAlign: 'center' }}>
-    <h1>Hello World</h1>
-    <ButtonManager />
-  </div>);
+import { getYelpReviews } from '../Actions/UI';
+import YelpReviews from './Containers/YelpReviews';
 
+const mapDispatchToProps = (dispatch) => ({
+  onComponentMount: (showing) => dispatch(getYelpReviews(showing))
+});
 
-export default App;
+class App extends React.Component {
+  componentDidMount() {
+    this.props.onComponentMount();
+  }
+  render() {
+    return (
+      <div style={{ textAlign: 'center' }}>
+        <h1>Hello World</h1>
+        <YelpReviews />
+      </div>);
+  }
+}
+
+App.propTypes = {
+  onComponentMount: PropTypes.func
+};
+
+export default connect(null, mapDispatchToProps)(App);

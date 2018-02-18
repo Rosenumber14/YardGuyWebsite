@@ -1,17 +1,19 @@
-import config from '../config';
-import yelp from './utils/yelp';
 import express from 'express';
-const app = express()
+import cors from 'cors';
+import yelp from './utils/yelp';
 
+const app = express();
 
-app.get('/yelp', function (req, res) {
+app.use(cors());
+
+app.get('/yelp', (req, res) => {
   yelp.getYelpReviews()
-  .then((reviews) => {
-    res.send(reviews);
-  })
-  .catch((e) => {
-    res.send(e)
-  })
-})
+    .then((reviews) => {
+      res.send(reviews);
+    })
+    .catch((e) => {
+      res.send(e);
+    });
+});
 
-app.listen(3000)
+app.listen(3000);

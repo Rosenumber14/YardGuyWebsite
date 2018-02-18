@@ -1,5 +1,7 @@
+import { RECEIVED_REVIEWS } from '../Actions/UI';
+
 const initialState = {
-  buttonShowing: true
+  yelpReviews: []
 };
 
 const UIReducer = (state, action) => {
@@ -8,9 +10,9 @@ const UIReducer = (state, action) => {
   }
 
   switch (action.type) {
-    case 'SET_BUTTON_SHOWING':
+    case RECEIVED_REVIEWS:
       return {
-        buttonShowing: action.buttonShowing
+        yelpReviews: action.reviews
       };
     default:
       return state;
