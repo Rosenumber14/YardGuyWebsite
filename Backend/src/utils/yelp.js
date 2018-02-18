@@ -7,7 +7,7 @@ let yelpReviews;
 let lastRetrieval;
 
 const getReviews = () => new Promise((resolve) => {
-  client.reviews('gary-danko-san-francisco').then(response => {
+  client.reviews('echo-mountain-landscaping-phoenix').then(response => {
     yelpReviews = response.jsonBody.reviews;
     lastRetrieval = new Date(Date.now());
     resolve(yelpReviews);

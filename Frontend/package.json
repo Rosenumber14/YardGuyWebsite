@@ -9,13 +9,15 @@
   "dependencies": {
     "html-webpack-plugin": "^2.26.0",
     "prop-types": "^15.6.0",
+    "ramda": "^0.25.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": "^1.16.2",
+    "xhr-promise-redux": "^1.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
