@@ -4,3 +4,7 @@ Backend/node_modules/
 Backend/config\.js
 
 package-lock\.json
+
+Frontend/dist/index\.html
+
+Frontend/dist/index_bundle\.js

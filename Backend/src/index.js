@@ -1,5 +1,7 @@
+import path from 'path';
 import express from 'express';
 import cors from 'cors';
+
 import yelp from './utils/yelp';
 
 const app = express();
@@ -14,6 +16,14 @@ app.get('/yelp', (req, res) => {
     .catch((e) => {
       res.send(e);
     });
+});
+
+app.get('/index_bundle.js', (req, res) => {
+  res.sendFile(path.join(__dirname + '/../../Frontend/dist/index_bundle.js'));
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname + '/../../Frontend/dist/index.html'));
 });
 
 app.listen(3000);
