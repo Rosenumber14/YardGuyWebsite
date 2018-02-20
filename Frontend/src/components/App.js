@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import '../styles/styles.less';
 
 import { getYelpReviews } from '../Actions/UI';
 import YelpReviews from './Containers/YelpReviews';
@@ -15,7 +16,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div style={{ textAlign: 'center' }}>
+      <div className={'app'}>
         <h1>Hello World</h1>
         <YelpReviews />
       </div>);

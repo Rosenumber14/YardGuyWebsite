@@ -3,31 +3,42 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "main": "src/index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "startProduction": "webpack"
+    "build": "cross-env NODE_ENV=production webpack -p --progress --colors",
+    "watch": "cross-env NODE_ENV=development webpack-dev-server -d --progress --colors --watch"
   },
   "dependencies": {
-    "html-webpack-plugin": "^2.26.0",
+    "html-webpack-plugin": "^2.30.1",
     "prop-types": "^15.6.0",
-    "ramda": "^0.25.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-redux": "^5.0.6",
+    "ramda": "^0.24.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.5",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2",
     "xhr-promise-redux": "^1.2.1"
   },
   "devDependencies": {
-    "babel-core": "^6.21.0",
-    "babel-loader": "^6.2.10",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.0.1",
+    "css-loader": "^0.28.4",
     "eslint": "^4.3.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-react": "^7.1.0"
+    "eslint-plugin-react": "^7.1.0",
+    "file-loader": "^0.11.2",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.4.0",
+    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-dev-server": "^2.9.4"
   }
 }
