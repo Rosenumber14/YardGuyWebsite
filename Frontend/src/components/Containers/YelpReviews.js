@@ -8,7 +8,8 @@ const mapStateToProps = (state) => ({
 });
 
 const YelpReviews = ({ yelpReviews }) =>
-  <div>{R.map((review) => <div key={review.id}>{review.text}</div>, yelpReviews)}</div>;
+  <div className='reviews'>{R.map((review) =>
+    <div className='review' key={review.id}>{review.text}</div>, yelpReviews)}</div>;
 
 YelpReviews.propTypes = {
   yelpReviews: PropTypes.array
