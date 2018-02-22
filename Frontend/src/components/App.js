@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import '../styles/styles.less';
 
 import { getYelpReviews } from '../Actions/UI';
+import Header from './Containers/Header';
+
 import YelpReviews from './Containers/YelpReviews';
 
 const mapDispatchToProps = (dispatch) => ({
@@ -17,8 +19,13 @@ class App extends React.Component {
   render() {
     return (
       <div className={'app'}>
-        <h1>Hello World</h1>
-        <YelpReviews />
+        <Header />
+        <div className='bar' style={{ backgroundColor: '#a1ce92' }}>
+          <YelpReviews />
+        </div>
+        <div className='bar' style={{ backgroundColor: '#92c0ce' }}>
+          <YelpReviews />
+        </div>
       </div>);
   }
 }
